@@ -3,3 +3,9 @@ kind: Kustomization
 resources:
   - repository.yaml
   - release.yaml
+configMapGenerator:
+  - name: sealed-secrets-values
+    files:
+      - values.yaml=values.yaml
+configurations:
+  - kustomizeconfig.yaml
